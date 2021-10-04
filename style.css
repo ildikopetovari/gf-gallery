@@ -1,0 +1,117 @@
+.containerMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(#fff, #b3b3b3);
+}
+.containerGallery {
+	width: 60%;
+	height: 60vh;
+  display: flex;
+  justify-content: space-between;  /*egy helyben marad a nyíl, még ha a képszélesség változik is*/
+  align-items: center;
+  background-color: #fff;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.arrow {
+  border: solid #000;
+  border-width: 0 6px 6px 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.arrow:hover {
+  opacity: 0.3;
+  cursor: pointer;
+}
+.right-arrow {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left-arrow {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+} 
+
+.containerImage {
+  display: flex;
+  flex-direction: column;
+  position: relative;  /* h. rátehessem a szöveget */
+}
+#picture {
+	height: 60vh;
+  width: 100%;
+	object-fit: contain;
+  /* object-fit: cover; */
+}
+.containerText {
+  background-color: rgba(128, 128, 128, .4);
+  color: #fff;
+  position: absolute;  /*rámegy a kép aljára, kicsit átlátszó*/
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.containerThumbnail {
+  display: flex;
+  flex-direction: column;
+}
+.containerThumbnailTitle {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.containerThumbnailPicture {
+  height: 25px;
+  margin: 1vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  margin: 1px;
+  opacity: 0.6;
+  position: relative;
+  bottom: 17.5px;
+  box-shadow: 0 5px 5px #666;
+}
+.thumbnail:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.thumbnailTitle {
+  /* display: none; */ /*ez nem jó, mert így a helye is eltűnik*/ 
+  /* visibility: hidden; */
+  position: relative;
+  bottom: 13.5px;
+  width: 45px;
+  background-color: #666;
+  color: #fff;
+  border-radius: 2.5px;
+  margin: 0 2px;
+  text-align: center;
+  padding: 5px;
+  font-size: 10px;
+  opacity: 0.3;
+}
+.thumbnail:hover .thumbnailTitle {
+  /* display: block; */
+  /* visibility: visible; */
+  opacity: 1; 
+}
+.active {
+  box-shadow: 0 10px 5px #333;
+  opacity: 1;
+}
